@@ -1,0 +1,17 @@
+:root {
+  --bg: #0d0f14;
+  --surface: #13161e;
+  --surface2: #1a1e28;
+  --border: #252936;
+  --border2: #2e3347;
+  --text: #e8eaf0;
+  --text-muted: #6b7294;
+  --text-dim: #9499b5;
+  --accent: #5c7cfa;
+  --accent-glow: rgba(92, 124, 250, 0.15);
+  --easy: #34d399;
+  --medium: #fbbf24;
+  --hard: #f87171;
+  --header-h: 56px;
+  --bottom-nav-h: 62px;
+}
