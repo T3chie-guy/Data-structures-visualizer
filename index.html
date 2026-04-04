@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSAA Visualizer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <a class="logo" href="#">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="3"/>
+        <path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>
+        <path d="M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/>
+      </svg>
+    </div>
+    <span class="logo-text">DSAA <span>Visualizer</span></span>
+  </a>
+
+  <nav>
+    <a href="#" class="active">Practice</a>
+    <a href="#">Algorithms</a>
+    <a href="#">Leaderboard</a>
+  </nav>
+
+  <div class="search-bar">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+    </svg>
+    <input type="text" placeholder="Search topics…" id="searchInput" oninput="filterProblems()">
+  </div>
+</header>
+
+<div class="page">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-header">
+        <div class="sidebar-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4f8ef7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </div>
+        <div>
+          <div class="sidebar-title">Data Structures<br>&amp; Algorithms</div>
+        </div>
+      </div>
+
+      <!-- Arrays -->
+      <div class="topic-group open" id="grp-arrays">
+        <div class="topic-group-header" onclick="toggleGroup('grp-arrays')">
+          <span class="topic-group-name">Arrays</span>
+          <svg class="topic-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="topic-children">
+          <a class="topic-child active" onclick="selectTopic('Arrays','1-D', this)"><span class="topic-dot"></span>1-D Arrays</a>
+          <a class="topic-child" onclick="selectTopic('Arrays','Multi-dimensional', this)"><span class="topic-dot"></span>Multi-dimensional</a>
+        </div>
+      </div>
+
+      <!-- Stacks -->
+      <div class="topic-group" id="grp-stacks">
+        <div class="topic-group-header" onclick="toggleGroup('grp-stacks')">
+          <span class="topic-group-name">Stacks</span>
+          <svg class="topic-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="topic-children">
+          <a class="topic-child" onclick="selectTopic('Stacks','Basics', this)"><span class="topic-dot"></span>Basics of Stacks</a>
+          <a class="topic-child" onclick="selectTopic('Stacks','Applications', this)"><span class="topic-dot"></span>Stack Applications</a>
+        </div>
+      </div>
+
+      <!-- Queues -->
+      <div class="topic-group" id="grp-queues">
+        <div class="topic-group-header" onclick="toggleGroup('grp-queues')">
+          <span class="topic-group-name">Queues</span>
+          <svg class="topic-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="topic-children">
+          <a class="topic-child" onclick="selectTopic('Queues','Basics', this)"><span class="topic-dot"></span>Basics of Queues</a>
+          <a class="topic-child" onclick="selectTopic('Queues','Priority Queue', this)"><span class="topic-dot"></span>Priority Queue</a>
+          <a class="topic-child" onclick="selectTopic('Queues','Deque', this)"><span class="topic-dot"></span>Deque</a>
+        </div>
+      </div>
+
+      <!-- Hash Tables -->
+      <div class="topic-group" id="grp-hash">
+        <div class="topic-group-header" onclick="toggleGroup('grp-hash')">
+          <span class="topic-group-name">Hash Tables</span>
+          <svg class="topic-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="topic-children">
+          <a class="topic-child" onclick="selectTopic('Hash Tables','Chaining', this)"><span class="topic-dot"></span>Chaining</a>
+          <a class="topic-child" onclick="selectTopic('Hash Tables','Open Addressing', this)"><span class="topic-dot"></span>Open Addressing</a>
+        </div>
+      </div>
+
+      <!-- Linked List -->
+      <div class="topic-group" id="grp-ll">
+        <div class="topic-group-header" onclick="toggleGroup('grp-ll')">
+          <span class="topic-group-name">Linked List</span>
+          <svg class="topic-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="topic-children">
+          <a class="topic-child" onclick="selectTopic('Linked List','Singly', this)"><span class="topic-dot"></span>Singly Linked</a>
+          <a class="topic-child" onclick="selectTopic('Linked List','Doubly', this)"><span class="topic-dot"></span>Doubly Linked</a>
+          <a class="topic-child" onclick="selectTopic('Linked List','Circular', this)"><span class="topic-dot"></span>Circular Linked</a>
+        </div>
+      </div>
+
+      <!-- Trees -->
+      <div class="topic-group" id="grp-trees">
+        <div class="topic-group-header" onclick="toggleGroup('grp-trees')">
+          <span class="topic-group-name">Trees</span>
+          <svg class="topic-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="topic-children">
+          <a class="topic-child" onclick="selectTopic('Trees','Binary Tree', this)"><span class="topic-dot"></span>Binary Tree</a>
+          <a class="topic-child" onclick="selectTopic('Trees','BST', this)"><span class="topic-dot"></span>BST</a>
+          <a class="topic-child" onclick="selectTopic('Trees','AVL Tree', this)"><span class="topic-dot"></span>AVL Tree</a>
+          <a class="topic-child" onclick="selectTopic('Trees','Heap', this)"><span class="topic-dot"></span>Heap</a>
+        </div>
+      </div>
+
+      <!-- Graphs -->
+      <div class="topic-group" id="grp-graphs">
+        <div class="topic-group-header" onclick="toggleGroup('grp-graphs')">
+          <span class="topic-group-name">Graphs</span>
+          <svg class="topic-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="topic-children">
+          <a class="topic-child" onclick="selectTopic('Graphs','BFS', this)"><span class="topic-dot"></span>BFS</a>
+          <a class="topic-child" onclick="selectTopic('Graphs','DFS', this)"><span class="topic-dot"></span>DFS</a>
+          <a class="topic-child" onclick="selectTopic('Graphs','Dijkstra', this)"><span class="topic-dot"></span>Dijkstra's</a>
+        </div>
+      </div>
+
+      <!-- Sorting -->
+      <div class="topic-group" id="grp-sorting">
+        <div class="topic-group-header" onclick="toggleGroup('grp-sorting')">
+          <span class="topic-group-name">Sorting</span>
+          <svg class="topic-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="topic-children">
+          <a class="topic-child" onclick="selectTopic('Sorting','Bubble Sort', this)"><span class="topic-dot"></span>Bubble Sort</a>
+          <a class="topic-child" onclick="selectTopic('Sorting','Merge Sort', this)"><span class="topic-dot"></span>Merge Sort</a>
+          <a class="topic-child" onclick="selectTopic('Sorting','Quick Sort', this)"><span class="topic-dot"></span>Quick Sort</a>
+          <a class="topic-child" onclick="selectTopic('Sorting','Heap Sort', this)"><span class="topic-dot"></span>Heap Sort</a>
+        </div>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="breadcrumb" id="breadcrumb">
+      <a href="#">All Topics</a>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      <a href="#">Arrays</a>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      <span>1-D Arrays</span>
+    </div>
+
+    <div class="content-card">
+      <div class="content-header">
+        <h1 class="content-title" id="pageTitle">1-D Arrays</h1>
+        <div class="content-tabs">
+          <div class="tab active">Visualizations</div>
+          <div class="tab">Theory</div>
+          <div class="tab">Quiz</div>
+        </div>
+      </div>
+
+      <div class="filter-bar">
+        <span class="filter-label">Filter by difficulty</span>
+        <div class="filter-pills">
+          <button class="pill active" onclick="setFilter('all', this)">All</button>
+          <button class="pill easy-pill" onclick="setFilter('Easy', this)">Easy</button>
+          <button class="pill medium-pill" onclick="setFilter('Medium', this)">Medium</button>
+          <button class="pill hard-pill" onclick="setFilter('Hard', this)">Hard</button>
+        </div>
+      </div>
+
+      <div class="problem-list" id="problemList"></div>
+
+      <div class="pagination">
+        <button class="page-btn nav">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn nav">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
