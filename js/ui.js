@@ -3,18 +3,18 @@
 const chevronSVG = `<svg class="topic-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>`;
 
 function buildTree(pfx) {
-  const visibleGroups = currentMode === 'practice' ? DATA_STRUCTURES : ALGORITHMS;
-  
+  const visibleGroups = currentMode === 'data-structures' ? DATA_STRUCTURES : ALGORITHMS;
+
   return visibleGroups.map((grp, gi) => {
     const subs = Object.keys(DATA[grp]);
     return `
-      <div class="topic-group ${grp===curGroup?'open':''}" id="${pfx}g${gi}">
+      <div class="topic-group ${grp === curGroup ? 'open' : ''}" id="${pfx}g${gi}">
         <div class="topic-group-header" onclick="toggleGrp('${pfx}g${gi}')">
           <span class="topic-group-name">${grp}</span>${chevronSVG}
         </div>
         <div class="topic-children">
           ${subs.map(sub => `
-            <a class="topic-child ${grp===curGroup&&sub===curSub?'active':''}"
+            <a class="topic-child ${grp === curGroup && sub === curSub ? 'active' : ''}"
                onclick="pick('${grp}','${sub}','${pfx}')">
               <span class="topic-dot"></span>${sub}
             </a>
@@ -34,9 +34,9 @@ function refreshTrees() {
 function refreshChips() {
   const mobileChips = document.getElementById('mobileChips');
   if (mobileChips) {
-    const visibleGroups = currentMode === 'practice' ? DATA_STRUCTURES : ALGORITHMS;
+    const visibleGroups = currentMode === 'data-structures' ? DATA_STRUCTURES : ALGORITHMS;
     mobileChips.innerHTML = visibleGroups.map(g =>
-      `<button class="mobile-chip ${g===curGroup?'active':''}" onclick="pickGroup('${g}')">${g}</button>`
+      `<button class="mobile-chip ${g === curGroup ? 'active' : ''}" onclick="pickGroup('${g}')">${g}</button>`
     ).join('');
   }
 }
@@ -58,10 +58,10 @@ function updateTabUI() {
 function updateBreadcrumbs() {
   const breadcrumb = document.getElementById('breadcrumb');
   if (!breadcrumb) return;
-  
+
   const chev = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>`;
-  const modeLabel = currentMode === 'practice' ? 'Data Structures' : 'Algorithms';
-  
+  const modeLabel = currentMode === 'data-structures' ? 'Data Structures' : 'Algorithms';
+
   breadcrumb.innerHTML = `
     <a href="#" onclick="switchMode('${currentMode}')">${modeLabel}</a>
     ${chev}
@@ -78,10 +78,20 @@ function renderProblems() {
   const subData = DATA[curGroup]?.[curSub] || { visualizations: [], theory: [], quiz: [] };
 
   if (currentTab === 'theory') {
+    let subTheory = subData.theory;
     el.innerHTML = `
       <div style="padding: 2rem; color: var(--text-dim); line-height: 1.6;">
-        <h3 style="color: var(--text); margin-bottom: 1rem;">${curSub} Theory</h3>
-        <p>${curSub} theory goes here. This section will contain detailed explanations, complexity analysis, and key concepts related to ${curSub}.</p>
+        <h2 style="color: var(--text); margin-bottom: 1rem;">${curSub} Theory</h2>
+        <p style="margin-bottom: 1rem;">${subTheory.generalKnowledge}</p>
+        <h3 style="color: var(--text); margin-bottom: 1rem;">Declaration</h3>
+        <p>${subTheory.declaration.theory}</p>
+        <img style="width: 70%" src=${subTheory.declaration.codeSnippet} alt="">
+        <h3 style="color: var(--text); margin-bottom: 1rem;">Initialization</h3>
+        <p>${subTheory.initialization.theory}</p>
+        <img style="width: 70%" src=${subTheory.initialization.codeSnippet} alt="">
+        <h3 style="color: var(--text); margin-bottom: 1rem;">Displaying</h3>
+        <p>${subTheory.displaying.theory}</p>
+        <img style="width: 70%" src=${subTheory.displaying.codeSnippet} alt="">
       </div>
     `;
     renderPagination(0);
@@ -89,7 +99,7 @@ function renderProblems() {
   }
 
   const probs = subData[currentTab] || [];
-  const filteredList = probs.filter(p => (curFilter==='all' || p.level===curFilter));
+  const filteredList = probs.filter(p => (curFilter === 'all' || p.level === curFilter));
 
   if (!filteredList.length) {
     el.innerHTML = `<div style="padding:3rem;text-align:center;color:var(--text-muted);font-size:.85rem;">No ${currentTab} found here.</div>`;
@@ -134,7 +144,7 @@ function renderPagination(totalItems) {
   }
 
   el.style.display = 'flex';
-  
+
   let html = `
     <button class="page-btn ${currentPage === 1 ? 'disabled' : ''}" onclick="if(${currentPage > 1}) setPage(${currentPage - 1})">
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -160,8 +170,8 @@ function renderPagination(totalItems) {
   el.innerHTML = html;
 }
 
-function toggleGrp(id) { 
-  document.getElementById(id)?.classList.toggle('open'); 
+function toggleGrp(id) {
+  document.getElementById(id)?.classList.toggle('open');
 }
 
 function openDrawer() {

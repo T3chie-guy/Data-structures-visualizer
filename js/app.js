@@ -3,7 +3,7 @@
 const DATA_STRUCTURES = ["Arrays", "Stacks", "Queues", "Hash Tables", "Linked List", "Trees", "Graphs"];
 const ALGORITHMS = ["Sorting", "Searching"];
 
-let currentMode = "practice"; // 'practice' or 'algorithms'
+let currentMode = "data-structures"; // 'data-structures' or 'algorithms'
 let currentTab = "visualizations"; // 'visualizations', 'theory', 'quiz'
 let curGroup = "Arrays", curSub = "1-D", curFilter = "all";
 
@@ -19,9 +19,9 @@ function switchMode(mode) {
   // Update Navigation UI
   document.querySelectorAll('.desktop-nav a, .bottom-nav .bnav-item').forEach(el => el.classList.remove('active'));
   
-  if (mode === 'practice') {
-    document.getElementById('nav-practice')?.classList.add('active');
-    document.getElementById('bnav-practice')?.classList.add('active');
+  if (mode === 'data-structures') {
+    document.getElementById('nav-data-structures')?.classList.add('active');
+    document.getElementById('bnav-data-structures')?.classList.add('active');
     document.getElementById('desktop-sidebar-title').textContent = "Data Structures";
     document.getElementById('drawer-sidebar-title').textContent = "Data Structures";
     curGroup = DATA_STRUCTURES[0];

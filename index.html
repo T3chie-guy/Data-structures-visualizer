@@ -5,11 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DSAA Visualizer</title>
-  
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
   <!-- Styles -->
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
@@ -24,7 +26,8 @@
   <header>
     <div class="header-left">
       <button class="hamburger" onclick="openDrawer()">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round">
           <line x1="3" y1="6" x2="21" y2="6" />
           <line x1="3" y1="12" x2="21" y2="12" />
           <line x1="3" y1="18" x2="21" y2="18" />
@@ -32,7 +35,8 @@
       </button>
       <a class="logo" href="#">
         <div class="logo-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
             <circle cx="12" cy="12" r="3" />
             <path d="M12 2v3M12 19v3M2 12h3M19 12h3" />
             <path d="M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1" />
@@ -43,7 +47,7 @@
     </div>
 
     <nav class="desktop-nav">
-      <a href="#" id="nav-practice" class="active" onclick="switchMode('practice')">Practice</a>
+      <a href="#" id="nav-data-structures" class="active" onclick="switchMode('data-structures')">Data Structures</a>
       <a href="#" id="nav-algorithms" onclick="switchMode('algorithms')">Algorithms</a>
     </nav>
 
@@ -61,7 +65,8 @@
     <div class="drawer-top">
       <a class="logo" href="#">
         <div class="logo-icon" style="width:28px;height:28px;">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="3" />
             <path d="M12 2v3M12 19v3M2 12h3M19 12h3" />
           </svg>
@@ -69,14 +74,16 @@
         <span class="logo-text" style="font-size:.95rem;">DSAA <span>Visualizer</span></span>
       </a>
       <button class="drawer-close" onclick="closeDrawer()">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round">
           <path d="M18 6L6 18M6 6l12 12" />
         </svg>
       </button>
     </div>
     <div class="drawer-section-header">
       <div class="sidebar-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4f8ef7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4f8ef7" stroke-width="1.8"
+          stroke-linecap="round" stroke-linejoin="round">
           <path d="M5 12h14M12 5l7 7-7 7" />
         </svg>
       </div>
@@ -91,9 +98,7 @@
       <div class="sidebar-card">
         <div class="sidebar-header">
           <div class="sidebar-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4f8ef7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
+            <img src="./public/neural-network.png" alt="">
           </div>
           <div class="sidebar-title" id="desktop-sidebar-title">Data Structures</div>
         </div>
@@ -127,28 +132,31 @@
         <div id="problemList"></div>
 
         <div id="pagination" class="pagination"></div>
-        </div>
-        </main>
-        </div>
+      </div>
+    </main>
+  </div>
 
   <!-- Bottom nav -->
   <nav class="bottom-nav">
-    <a class="bnav-item active" href="#" id="bnav-practice" onclick="switchMode('practice')">
-      <svg class="bnav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <a class="bnav-item active" href="#" id="bnav-data-structures" onclick="switchMode('data-structures')">
+      <svg class="bnav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
         <polyline points="9 22 9 12 15 12 15 22" />
       </svg>
-      <span class="bnav-label">Practice</span>
+      <span class="bnav-label">Data Structures</span>
     </a>
     <a class="bnav-item" href="#" id="bnav-algorithms" onclick="switchMode('algorithms')">
-      <svg class="bnav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <svg class="bnav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="16 18 22 12 16 6" />
         <polyline points="8 6 2 12 8 18" />
       </svg>
       <span class="bnav-label">Algos</span>
     </a>
     <a class="bnav-item" href="#">
-      <svg class="bnav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <svg class="bnav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="12" cy="8" r="4" />
         <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
       </svg>

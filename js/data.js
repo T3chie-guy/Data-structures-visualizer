@@ -2,18 +2,38 @@ const DATA = {
   "Arrays": {
     "1-D": {
       "visualizations": [
-        { name: "Array Traversal", completion: 88, level: "Easy" },
-        { name: "Sliding Window Minimum", completion: 73, level: "Easy" },
-        { name: "Two Pointer Technique", completion: 76, level: "Easy" },
-        { name: "Kadane's Algorithm", completion: 85, level: "Easy" },
-        { name: "Prefix Sum Array", completion: 89, level: "Easy" },
-        { name: "Binary Search on Array", completion: 67, level: "Medium" },
-        { name: "Dutch National Flag", completion: 46, level: "Hard" },
+        { name: "Array Traversal" },
+        { name: "Sliding Window Minimum" },
+        {
+          name: "Two Pointer Technique"
+        },
+        {
+          name: "Kadane's Algorithm"
+        },
+        { name: "Prefix Sum Array" },
+        { name: "Binary Search on Array" },
+        { name: "Dutch National Flag" },
       ],
-      "theory": [
-        { name: "Introduction to Arrays", completion: 100, level: "Easy" },
-        { name: "Memory Management", completion: 40, level: "Medium" },
-      ],
+      "theory":
+      {
+        generalKnowledge: "Are Stored in continous memory location with the index of the first element being 0 eg arr[0]",
+        declaration:
+        {
+          theory: "You specify data type and size of array",
+          codeSnippet: "../public/code-snippets/array/1-D-declaration.png"
+        },
+        initialization: {
+          theory: "jfdjfgdjg",
+          codeSnippet: "../public/code-snippets/array/1-D-initialization.png"
+        },
+        displaying: {
+          theory: "ata",
+          codeSnippet: "../public/code-snippets/array/1-D-displaying.png"
+        }
+
+      },
+
+
       "quiz": [
         { name: "Basic Array Quiz", completion: 0, level: "Easy" },
         { name: "Array Complexity Analysis", completion: 0, level: "Medium" },
@@ -21,32 +41,50 @@ const DATA = {
     },
     "Multi-dimensional": {
       "visualizations": [
-        { name: "Matrix Traversal", completion: 80, level: "Easy" },
-        { name: "Spiral Matrix", completion: 55, level: "Medium" },
-        { name: "Matrix Rotation", completion: 48, level: "Hard" },
-        { name: "Row-Column Zeroing", completion: 72, level: "Medium" },
+        { name: "Matrix Traversal" },
+        { name: "Spiral Matrix" },
+        { name: "Matrix Rotation" },
+        { name: "Row-Column Zeroing" },
       ],
-      "theory": [],
+      "theory":
+      {
+        generalKnowledge: "ckcnskcn Stored in continous memory location with the index of the first element being 0 eg arr[0]",
+        declaration:
+        {
+          theory: "You specify data type and size of array",
+          codeSnippet: "../public/code-snippets/array/1-D-declaration.png"
+        },
+        initialization: {
+          theory: "jfdjfgdjg",
+          codeSnippet: "../public/code-snippets/array/1-D-initialization.png"
+        },
+        displaying: {
+          theory: "ata",
+          codeSnippet: "../public/code-snippets/array/1-D-displaying.png"
+        }
+
+      },
+
       "quiz": []
     }
   },
   "Stacks": {
     "Basics": {
       "visualizations": [
-        { name: "Stack Push & Pop", completion: 92, level: "Easy" },
-        { name: "Balanced Parentheses", completion: 78, level: "Easy" },
-        { name: "Infix to Postfix", completion: 60, level: "Medium" },
-        { name: "Next Greater Element", completion: 52, level: "Medium" },
-        { name: "Largest Rectangle in Histogram", completion: 38, level: "Hard" },
+        { name: "Stack Push & Pop" },
+        { name: "Balanced Parentheses" },
+        { name: "Infix to Postfix" },
+        { name: "Next Greater Element" },
+        { name: "Largest Rectangle in Histogram" },
       ],
       "theory": [],
       "quiz": []
     },
     "Applications": {
       "visualizations": [
-        { name: "Undo/Redo Mechanism", completion: 85, level: "Easy" },
-        { name: "Browser History Stack", completion: 88, level: "Easy" },
-        { name: "Expression Evaluator", completion: 55, level: "Medium" },
+        { name: "Undo/Redo Mechanism" },
+        { name: "Browser History Stack" },
+        { name: "Expression Evaluator" },
       ],
       "theory": [],
       "quiz": []
@@ -55,27 +93,27 @@ const DATA = {
   "Queues": {
     "Basics": {
       "visualizations": [
-        { name: "Queue Enqueue & Dequeue", completion: 91, level: "Easy" },
-        { name: "Circular Queue", completion: 72, level: "Medium" },
-        { name: "Queue using Stacks", completion: 65, level: "Medium" },
-        { name: "Level Order Traversal", completion: 70, level: "Medium" },
+        { name: "Queue Enqueue & Dequeue" },
+        { name: "Circular Queue" },
+        { name: "Queue using Stacks" },
+        { name: "Level Order Traversal" },
       ],
       "theory": [],
       "quiz": []
     },
     "Priority Queue": {
       "visualizations": [
-        { name: "Min Heap Operations", completion: 68, level: "Medium" },
-        { name: "Max Heap Operations", completion: 70, level: "Medium" },
-        { name: "K Largest Elements", completion: 48, level: "Hard" },
+        { name: "Min Heap Operations" },
+        { name: "Max Heap Operations" },
+        { name: "K Largest Elements" },
       ],
       "theory": [],
       "quiz": []
     },
     "Deque": {
       "visualizations": [
-        { name: "Sliding Window Maximum", completion: 55, level: "Hard" },
-        { name: "Palindrome Check with Deque", completion: 82, level: "Easy" },
+        { name: "Sliding Window Maximum" },
+        { name: "Palindrome Check with Deque" },
       ],
       "theory": [],
       "quiz": []
@@ -84,18 +122,18 @@ const DATA = {
   "Hash Tables": {
     "Chaining": {
       "visualizations": [
-        { name: "Hash Function Visualization", completion: 85, level: "Easy" },
-        { name: "Collision with Chaining", completion: 75, level: "Medium" },
-        { name: "Rehashing Demo", completion: 60, level: "Medium" },
+        { name: "Hash Function Visualization" },
+        { name: "Collision with Chaining" },
+        { name: "Rehashing Demo" },
       ],
       "theory": [],
       "quiz": []
     },
     "Open Addressing": {
       "visualizations": [
-        { name: "Linear Probing", completion: 72, level: "Medium" },
-        { name: "Quadratic Probing", completion: 65, level: "Medium" },
-        { name: "Double Hashing", completion: 50, level: "Hard" },
+        { name: "Linear Probing" },
+        { name: "Quadratic Probing" },
+        { name: "Double Hashing" },
       ],
       "theory": [],
       "quiz": []
@@ -104,26 +142,26 @@ const DATA = {
   "Linked List": {
     "Singly": {
       "visualizations": [
-        { name: "Insert & Delete Node", completion: 88, level: "Easy" },
-        { name: "Reverse a Linked List", completion: 80, level: "Easy" },
-        { name: "Floyd's Cycle Detection", completion: 65, level: "Medium" },
-        { name: "Merge Two Sorted Lists", completion: 70, level: "Medium" },
+        { name: "Insert & Delete Node" },
+        { name: "Reverse a Linked List" },
+        { name: "Floyd's Cycle Detection" },
+        { name: "Merge Two Sorted Lists" },
       ],
       "theory": [],
       "quiz": []
     },
     "Doubly": {
       "visualizations": [
-        { name: "DLL Insert & Delete", completion: 82, level: "Easy" },
-        { name: "LRU Cache (DLL + HashMap)", completion: 48, level: "Hard" },
+        { name: "DLL Insert & Delete" },
+        { name: "LRU Cache (DLL + HashMap)" },
       ],
       "theory": [],
       "quiz": []
     },
     "Circular": {
       "visualizations": [
-        { name: "Circular List Traversal", completion: 80, level: "Easy" },
-        { name: "Josephus Problem", completion: 52, level: "Hard" },
+        { name: "Circular List Traversal" },
+        { name: "Josephus Problem" },
       ],
       "theory": [],
       "quiz": []
@@ -132,37 +170,37 @@ const DATA = {
   "Trees": {
     "Binary Tree": {
       "visualizations": [
-        { name: "Tree Traversals (In/Pre/Post)", completion: 86, level: "Easy" },
-        { name: "Height of Binary Tree", completion: 84, level: "Easy" },
-        { name: "Mirror a Binary Tree", completion: 75, level: "Medium" },
-        { name: "Diameter of Binary Tree", completion: 62, level: "Medium" },
+        { name: "Tree Traversals (In/Pre/Post)" },
+        { name: "Height of Binary Tree" },
+        { name: "Mirror a Binary Tree" },
+        { name: "Diameter of Binary Tree" },
       ],
       "theory": [],
       "quiz": []
     },
     "BST": {
       "visualizations": [
-        { name: "BST Insert & Delete", completion: 82, level: "Easy" },
-        { name: "BST Search Visualization", completion: 88, level: "Easy" },
-        { name: "Validate BST", completion: 65, level: "Medium" },
-        { name: "Kth Smallest in BST", completion: 68, level: "Medium" },
+        { name: "BST Insert & Delete" },
+        { name: "BST Search Visualization" },
+        { name: "Validate BST" },
+        { name: "Kth Smallest in BST" },
       ],
       "theory": [],
       "quiz": []
     },
     "AVL Tree": {
       "visualizations": [
-        { name: "AVL Rotations Demo", completion: 70, level: "Medium" },
-        { name: "AVL Insert with Balancing", completion: 62, level: "Hard" },
+        { name: "AVL Rotations Demo" },
+        { name: "AVL Insert with Balancing" },
       ],
       "theory": [],
       "quiz": []
     },
     "Heap": {
       "visualizations": [
-        { name: "Heapify Visualization", completion: 74, level: "Medium" },
-        { name: "Heap Sort Animation", completion: 76, level: "Medium" },
-        { name: "Build Max Heap", completion: 78, level: "Easy" },
+        { name: "Heapify Visualization" },
+        { name: "Heap Sort Animation" },
+        { name: "Build Max Heap" },
       ],
       "theory": [],
       "quiz": []
@@ -171,26 +209,26 @@ const DATA = {
   "Graphs": {
     "BFS": {
       "visualizations": [
-        { name: "BFS Traversal Visualization", completion: 82, level: "Easy" },
-        { name: "Shortest Path (BFS)", completion: 74, level: "Medium" },
-        { name: "Connected Components", completion: 70, level: "Medium" },
+        { name: "BFS Traversal Visualization" },
+        { name: "Shortest Path (BFS)" },
+        { name: "Connected Components" },
       ],
       "theory": [],
       "quiz": []
     },
     "DFS": {
       "visualizations": [
-        { name: "DFS Traversal Visualization", completion: 80, level: "Easy" },
-        { name: "Topological Sort (DFS)", completion: 62, level: "Medium" },
-        { name: "Cycle Detection in Graph", completion: 58, level: "Hard" },
+        { name: "DFS Traversal Visualization" },
+        { name: "Topological Sort (DFS)" },
+        { name: "Cycle Detection in Graph" },
       ],
       "theory": [],
       "quiz": []
     },
     "Dijkstra": {
       "visualizations": [
-        { name: "Dijkstra's Algorithm Demo", completion: 68, level: "Medium" },
-        { name: "Single Source Shortest Path", completion: 65, level: "Hard" },
+        { name: "Dijkstra's Algorithm Demo" },
+        { name: "Single Source Shortest Path" },
       ],
       "theory": [],
       "quiz": []
@@ -199,33 +237,33 @@ const DATA = {
   "Sorting": {
     "Bubble Sort": {
       "visualizations": [
-        { name: "Bubble Sort Animation", completion: 95, level: "Easy" },
-        { name: "Optimized Bubble Sort", completion: 88, level: "Easy" },
+        { name: "Bubble Sort Animation" },
+        { name: "Optimized Bubble Sort" },
       ],
       "theory": [],
       "quiz": []
     },
     "Merge Sort": {
       "visualizations": [
-        { name: "Merge Sort Divide & Conquer", completion: 82, level: "Medium" },
-        { name: "Bottom-Up Merge Sort", completion: 68, level: "Medium" },
+        { name: "Merge Sort Divide & Conquer" },
+        { name: "Bottom-Up Merge Sort" },
       ],
       "theory": [],
       "quiz": []
     },
     "Quick Sort": {
       "visualizations": [
-        { name: "Quick Sort with Pivot", completion: 78, level: "Medium" },
-        { name: "Lomuto vs Hoare Partition", completion: 60, level: "Hard" },
-        { name: "Randomized Quick Sort", completion: 65, level: "Medium" },
+        { name: "Quick Sort with Pivot" },
+        { name: "Lomuto vs Hoare Partition" },
+        { name: "Randomized Quick Sort" },
       ],
       "theory": [],
       "quiz": []
     },
     "Heap Sort": {
       "visualizations": [
-        { name: "Heap Sort Full Demo", completion: 76, level: "Medium" },
-        { name: "In-place Heap Sort", completion: 62, level: "Hard" },
+        { name: "Heap Sort Full Demo" },
+        { name: "In-place Heap Sort" },
       ],
       "theory": [],
       "quiz": []
@@ -234,29 +272,29 @@ const DATA = {
   "Searching": {
     "Linear Search": {
       "visualizations": [
-        { name: "Basic Linear Search", completion: 95, level: "Easy" },
-        { name: "Searching in Unsorted Array", completion: 92, level: "Easy" },
-        { name: "Global Maximum Search", completion: 88, level: "Easy" },
+        { name: "Basic Linear Search" },
+        { name: "Searching in Unsorted Array" },
+        { name: "Global Maximum Search" },
       ],
       "theory": [],
       "quiz": []
     },
     "Binary Search": {
       "visualizations": [
-        { name: "Iterative Binary Search", completion: 85, level: "Easy" },
-        { name: "Recursive Binary Search", completion: 80, level: "Medium" },
-        { name: "Lower Bound / Upper Bound", completion: 65, level: "Medium" },
-        { name: "Search in Rotated Sorted Array", completion: 58, level: "Hard" },
-        { name: "Square Root using Binary Search", completion: 72, level: "Medium" },
+        { name: "Iterative Binary Search" },
+        { name: "Recursive Binary Search" },
+        { name: "Lower Bound / Upper Bound" },
+        { name: "Search in Rotated Sorted Array" },
+        { name: "Square Root using Binary Search" },
       ],
       "theory": [],
       "quiz": []
     },
     "Specialized": {
       "visualizations": [
-        { name: "Ternary Search", completion: 45, level: "Hard" },
-        { name: "Jump Search", completion: 52, level: "Medium" },
-        { name: "Exponential Search", completion: 48, level: "Hard" },
+        { name: "Ternary Search" },
+        { name: "Jump Search" },
+        { name: "Exponential Search" },
       ],
       "theory": [],
       "quiz": []

@@ -33,16 +33,22 @@
   border-bottom: 1px solid var(--border);
 }
 
-.sidebar-icon {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(135deg, #1a2a4a, #162040);
-  border: 1px solid #2a3a5a;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+/* .sidebar-icon { */
+/*   width: 40px; */
+/*   height: 40px; */
+/*   background: linear-gradient(135deg, #1a2a4a, #162040); */
+/*   border: 1px solid #2a3a5a; */
+/*   border-radius: 10px; */
+/*   display: flex; */
+/*   align-items: center; */
+/*   justify-content: center; */
+/*   flex-shrink: 0; */
+/* } */
+
+.sidebar-icon img {
+  width: 100%;
+  background: rgba(255, 253, 253, 0.2);
+  border-radius: 8px;
 }
 
 .sidebar-title {
