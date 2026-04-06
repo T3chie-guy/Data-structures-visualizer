@@ -79,19 +79,26 @@ function renderProblems() {
 
   if (currentTab === 'theory') {
     let subTheory = subData.theory;
+
+    if (!subTheory || Array.isArray(subTheory)) {
+      el.innerHTML = `<div style="padding:3rem;text-align:center;color:var(--text-muted);">Theory coming soon.</div>`;
+      renderPagination(0);
+      return;
+    }
+
     el.innerHTML = `
       <div style="padding: 2rem; color: var(--text-dim); line-height: 1.6;">
         <h2 style="color: var(--text); margin-bottom: 1rem;">${curSub} Theory</h2>
         <p style="margin-bottom: 1rem;">${subTheory.generalKnowledge}</p>
         <h3 style="color: var(--text); margin-bottom: 1rem;">Declaration</h3>
         <p>${subTheory.declaration.theory}</p>
-        <img style="width: 70%" src=${subTheory.declaration.codeSnippet} alt="">
+        <img style="width: 70%" src="${subTheory.declaration.codeSnippet}" alt="">
         <h3 style="color: var(--text); margin-bottom: 1rem;">Initialization</h3>
         <p>${subTheory.initialization.theory}</p>
-        <img style="width: 70%" src=${subTheory.initialization.codeSnippet} alt="">
+        <img style="width: 70%" src="${subTheory.initialization.codeSnippet}" alt="">
         <h3 style="color: var(--text); margin-bottom: 1rem;">Displaying</h3>
         <p>${subTheory.displaying.theory}</p>
-        <img style="width: 70%" src=${subTheory.displaying.codeSnippet} alt="">
+        <img style="width: 70%" src="${subTheory.displaying.codeSnippet}" alt="">
       </div>
     `;
     renderPagination(0);

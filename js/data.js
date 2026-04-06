@@ -20,15 +20,15 @@ const DATA = {
         declaration:
         {
           theory: "You specify data type and size of array",
-          codeSnippet: "../public/code-snippets/array/1-D-declaration.png"
+          codeSnippet: "./public/code-snippets/array/1-D-declaration.png"
         },
         initialization: {
           theory: "Array can be initialized either at the time of declaration or after that.",
-          codeSnippet: "../public/code-snippets/array/1-D-initialization.png"
+          codeSnippet: "./public/code-snippets/array/1-D-initialization.png"
         },
         displaying: {
           theory: "Loop over an array and display individual elements",
-          codeSnippet: "../public/code-snippets/array/1-D-displaying.png"
+          codeSnippet: "./public/code-snippets/array/1-D-displaying.png"
         }
 
       },
@@ -52,15 +52,15 @@ const DATA = {
         declaration:
         {
           theory: "You specify data type and size of array rows and size of array columns",
-          codeSnippet: "../public/code-snippets/array/multi-D-declaration.png"
+          codeSnippet: "./public/code-snippets/array/multi-D-declaration.png"
         },
         initialization: {
           theory: "Can be initialized during or after initialization. If initialized during declaration wach row should bee put in {curly} braces",
-          codeSnippet: "../public/code-snippets/array/multi-D-initialization.png"
+          codeSnippet: "./public/code-snippets/array/multi-D-initialization.png"
         },
         displaying: {
           theory: "2 loops are used one outer loops over the rows the other over the columns",
-          codeSnippet: "../public/code-snippets/array/multi-D-displaying.png"
+          codeSnippet: "./public/code-snippets/array/multi-D-displaying.png"
         }
 
       },
