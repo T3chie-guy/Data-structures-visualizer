@@ -23,11 +23,11 @@ const DATA = {
           codeSnippet: "../public/code-snippets/array/1-D-declaration.png"
         },
         initialization: {
-          theory: "jfdjfgdjg",
+          theory: "Array can be initialized either at the time of declaration or after that.",
           codeSnippet: "../public/code-snippets/array/1-D-initialization.png"
         },
         displaying: {
-          theory: "ata",
+          theory: "Loop over an array and display individual elements",
           codeSnippet: "../public/code-snippets/array/1-D-displaying.png"
         }
 
@@ -48,19 +48,19 @@ const DATA = {
       ],
       "theory":
       {
-        generalKnowledge: "ckcnskcn Stored in continous memory location with the index of the first element being 0 eg arr[0]",
+        generalKnowledge: "Multi-dimensional array is an array of arrays which arranges elements a table/matrix with rows and columns.",
         declaration:
         {
-          theory: "You specify data type and size of array",
-          codeSnippet: "../public/code-snippets/array/1-D-declaration.png"
+          theory: "You specify data type and size of array rows and size of array columns",
+          codeSnippet: "../public/code-snippets/array/multi-D-declaration.png"
         },
         initialization: {
-          theory: "jfdjfgdjg",
-          codeSnippet: "../public/code-snippets/array/1-D-initialization.png"
+          theory: "Can be initialized during or after initialization. If initialized during declaration wach row should bee put in {curly} braces",
+          codeSnippet: "../public/code-snippets/array/multi-D-initialization.png"
         },
         displaying: {
-          theory: "ata",
-          codeSnippet: "../public/code-snippets/array/1-D-displaying.png"
+          theory: "2 loops are used one outer loops over the rows the other over the columns",
+          codeSnippet: "../public/code-snippets/array/multi-D-displaying.png"
         }
 
       },
